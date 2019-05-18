@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import static jdk.nashorn.internal.objects.NativeDebug.getClass;
+
 
 public class Todos extends Application {
     public void start(Stage stage) throws Exception{
