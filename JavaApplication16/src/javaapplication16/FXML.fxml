@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="251.0" prefWidth="331.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController">
+   <stylesheets>
+        <URL value="@fx.css" />
+    </stylesheets>
+   
+   <children> 
+       
+      <TextField id="textField" fx:id="textField1" layoutY="-2.0" onKeyPressed="#onKeyPressed" prefHeight="47.0" prefWidth="331.0" styleClass="mainFxmlClass" stylesheets="@fx.css" />
+      <ScrollPane fx:id="scrollPane" hbarPolicy="never" layoutY="45.0" prefHeight="200.0" prefWidth="331.0" style="-fx-background-color: transparent;" styleClass="mainFxmlClass" stylesheets="@fx.css">
+         <content>
+            <VBox fx:id="todoBox" prefHeight="200.0" prefWidth="309.0" style="-fx-background-color: #ffffff;" styleClass="bacg" />
+         </content>
+      </ScrollPane>
+   </children>
+     
+</AnchorPane>
