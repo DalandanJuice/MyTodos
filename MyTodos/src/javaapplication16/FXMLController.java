@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -34,7 +35,7 @@ import javafx.scene.layout.VBox;
  */
 public class FXMLController implements Initializable {
 
-    private Todos_1 todo = new Todos_1();
+    private Todolist todo = new Todolist();
     private Label label;
     @FXML
     private ScrollPane scrollPane;
@@ -54,14 +55,17 @@ public class FXMLController implements Initializable {
             }
         }
     }
-
     @FXML
-    private void deleteTodo(MouseEvent e) {
-        if (e.getButton() == SECONDARY) {
-            
-            
+    private void delete(ActionEvent e) {
+        for(CheckBox cb: todos) {
+            if (cb.isSelected()) {
+                System.out.println("deleted");
+            }
         }
     }
+    
+    @FXML
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -70,6 +74,12 @@ public class FXMLController implements Initializable {
         menu = new ContextMenu();
         delete = new MenuItem("Delete");
         menu.getItems().add(delete);
+        delete.setOnAction(new EventHandler<ActionEvent>() {
+    public void handle(ActionEvent e) {
+        System.out.println(e.getSource());
+    }
+});
+        
 
     }
 
