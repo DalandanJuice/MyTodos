@@ -33,7 +33,7 @@
     }
     .check-box {
         -fx-padding: 5px 20px 0px 5px;
-        -fx-font-size: 20px;
+        -fx-font-size: 25px;
     }
     .check-box .box {
         -fx-background-radius: 500em;
@@ -42,6 +42,9 @@
     .text-field {
         -fx-background-color: #FFFAFF;
         -fx-font-size: 20px;
+    }
+    .menu-item {
+        -fx-font-size: 15px;
     }
 
 }
