@@ -7,20 +7,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="clear" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clear" prefHeight="321.0" prefWidth="331.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaapplication16.FXMLController">
+<AnchorPane fx:id="clear" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clear" prefHeight="321.0" prefWidth="331.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaapplication16.FXMLController">
    <stylesheets>
         <URL value="@fx.css" />
     </stylesheets>
    
    <children> 
        
-      <TextField id="textField" fx:id="textField1" layoutX="7.0" layoutY="2.0" onKeyPressed="#onKeyPressed" prefHeight="41.0" prefWidth="299.0" style="-fx-background-color: #ffffff; -fx-border-color: black;" styleClass="mainFxmlClass" stylesheets="@fx.css" />
-      <ScrollPane fx:id="scrollPane" hbarPolicy="never" layoutX="6.0" layoutY="45.0" prefHeight="213.0" prefWidth="325.0" style="-fx-background-color: transparent;" styleClass="mainFxmlClass" stylesheets="@fx.css">
+      <TextField id="textField" fx:id="textField1" layoutX="7.0" layoutY="2.0" onKeyPressed="#onKeyPressed" prefHeight="41.0" prefWidth="299.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #46494C; -fx-border-radius: 1em;" styleClass="mainFxmlClass" stylesheets="@fx.css" />
+      <ScrollPane fx:id="scrollPane" hbarPolicy="never" layoutX="6.0" layoutY="45.0" prefHeight="213.0" prefWidth="325.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="mainFxmlClass" stylesheets="@fx.css">
          <content>
-            <VBox fx:id="todoBox" prefHeight="214.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-border-width: 0.5px;" styleClass="bacg" />
+            <VBox fx:id="todoBox" prefHeight="214.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: transparent; -fx-border-width: 0px;" styleClass="bacg" />
          </content>
       </ScrollPane>
-      <Button fx:id="clearButton" layoutX="14.0" layoutY="274.0" mnemonicParsing="false" onAction="#clear" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5em;" text="Clear" />
+      <Button fx:id="clearButton" layoutX="14.0" layoutY="274.0" mnemonicParsing="false" onAction="#clear" style="-fx-background-color: white; -fx-border-radius: 5em;" text="Clear" />
    </children>
      
 </AnchorPane>

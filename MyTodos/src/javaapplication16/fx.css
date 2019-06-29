@@ -1,13 +1,13 @@
 .mainFxmlClass {
 
     .anchor-pane {
-        -fx-background-color: #FFFAFF;
+        -fx-background-color: #FFFFFF;
     }
     .v-box {
         -fx-background-color: #FFFAFF;
     }
     .scroll-pane {
-        -fx-background-color: transparent;
+        -fx-background-color: #FFFFFF;
     }
     .scroll-bar:vertical{
         -fx-background-color:transparent;
@@ -24,8 +24,8 @@
         .scroll-bar:vertical *.increment-arrow,
         .scroll-bar:vertical *.decrement-arrow {
 
-        -fx-background-color: transparent;
-        -fx-border-color: transparent;
+        -fx-background-color: #FFFFFF;
+        -fx-border-color: #FFFFFF;
         -fx-background-radius: 0em;
     }
     .scroll-pane .corner {
@@ -33,10 +33,12 @@
     }
     .check-box {
         -fx-padding: 5px 20px 0px 5px;
-        -fx-font-size: 25px;
+        -fx-font-size: 20px;
     }
     .check-box .box {
         -fx-background-radius: 500em;
+        -fx-background-color: #FFFFFF;
+        -fx-border-color: #1E1B18;
        
     }
     .text-field {
