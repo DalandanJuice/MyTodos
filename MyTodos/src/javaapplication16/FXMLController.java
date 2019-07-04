@@ -20,8 +20,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import static javafx.scene.input.KeyCode.ENTER;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseButton;
 import static javafx.scene.input.MouseButton.SECONDARY;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -33,7 +35,7 @@ import javafx.scene.layout.VBox;
  */
 public class FXMLController implements Initializable {
 
-    private Todolist MyTodos = new Todolist();
+    private Todolist MyTodos;
     private Label label;
     @FXML
     private ScrollPane scrollPane;
@@ -52,7 +54,7 @@ public class FXMLController implements Initializable {
    
     @FXML
     private void onKeyPressed(KeyEvent e) {
-        if (e.getCode() == ENTER) {
+        if (e.getCode() == KeyCode.ENTER) {
 
             MyTodos.add(todoBox, todos, new CheckBox(textField1.getText()));
             for (int j = 0; j < todos.size(); j++) {
@@ -64,11 +66,11 @@ public class FXMLController implements Initializable {
     }
 
     private void showMenu(MouseEvent event) {
-        if (event.getButton() == SECONDARY) {
+        if (event.getButton() == MouseButton.SECONDARY) {
             for (int j = 0; j < todos.size(); j++) {
                 if (event.getSource() == todos.get(j)) {
                     a = j;
-                    menu.show(todos.get(j), Side.RIGHT, 0, 0);
+                    menu.show(todos.get(j), Side.BOTTOM, 0, 0);
                 }
             }
 
@@ -79,8 +81,6 @@ public class FXMLController implements Initializable {
         int i = 0;
         for (int j = 0; j < todos.size(); j++) {
             todoBox.getChildren().remove(todos.get(j));
-           
-          
             
         }
         for (int j = 0; j < todos.size(); j++) {
@@ -101,7 +101,7 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-
+       MyTodos  = new Todolist();
         a = -2;
         todos = new ArrayList<>();
         menu = new ContextMenu();
